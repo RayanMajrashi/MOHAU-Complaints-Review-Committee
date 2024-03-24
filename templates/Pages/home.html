@@ -1,0 +1,143 @@
+{% extends 'Pages/Stracture.html' %}
+{% block head %}
+<style>
+  :root{
+    --container-color: #474747;
+    --container2-color:rgba(71, 71, 71,0.5);
+  }
+  body{
+    margin:0;
+    overflow-x:hidden;
+    font-family: "Lateef", serif;
+    background-color:#DDE6DE;
+  }
+  main{
+    background:url("https://replit.com/@RayanMajrashi/MOHAU-Complaints-Review-Committee#static/Mainimage.jpeg");
+    background-size: cover;
+  }
+  h1{
+    color:#CE9A48;
+    text-align:center;
+    font-size:70px;
+  }
+  #centerContainer{
+    margin-top:40px;
+  }
+  .OuterDiv{
+    background-color:var(--container-color);
+    width: 245px;
+    height:200px;
+    border-radius:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:10px;
+    color:white;
+    font-size:40px;
+  }
+  a{
+    text-decoration:none;
+  }
+  
+</style>
+{% endblock %}
+{% block body %}
+<h1> الصفحة الرئيسية </h1>
+<div class="container" id="centerContainer">
+  <div class="row">
+
+    <div class="col">
+     <div class="p-1 OuterDiv mx-auto">
+       <div class="row">
+         <div class="col-8" ></div>
+         <div class="col-1 ms-1" >
+           <img src="static/search.png" width="50" height="50"></div>
+       </div>
+       <div class="row-11">
+         <div class="col" style="text-align:center;">
+           <div class="center">البحث في النظام</div></div>
+       </div>
+     </div>
+    </div>
+    <div class="col">
+     <div class="p-1 OuterDiv mx-auto" style="
+       background-color:var(--container2-color);">
+       <div class="row">
+         <div class="col-8" ></div>
+         <div class="col-1 ms-2" >
+           <img src="static/register.png" width="50" height="50"></div>
+       </div>
+       <div class="row-11">
+         <div class="col" style="text-align:center;">
+           <div class="center">المخالفات</div></div>
+       </div>
+     </div>
+    </div>
+    <div class="col">
+     <a href="/Companies">      <!-- route to Companies Page -->
+     <div class="p-1 OuterDiv mx-auto">
+       <div class="row">
+         <div class="col-8" >
+         </div>
+         <div class="col-1 ms-1" >
+           <img src="static/skyscraper.png" width="50" height="50">
+         </div>
+       </div>
+       <div class="row-11">
+         <div class="col" style="text-align:center;">
+           <div class="center">المؤسسات
+           </div>
+         </div>
+       </div>
+     </div>
+      </a>
+    </div>
+  
+  </div>
+  <div class="row mt-5">
+      <div class="col">
+       <div class="p-1 OuterDiv mx-auto" style="
+         background-color:var(--container2-color);">
+         <div class="row">
+           <div class="col-8" ></div>
+           <div class="col-1 ms-1" >
+             <img src="static/data-infringement.png" width="50" height="50"></div>
+         </div>
+         <div class="row-11">
+           <div class="col" style="text-align:center;">
+             <div class="center">تسجيل مخالفة</div></div>
+         </div>
+       </div>
+      </div>
+    <div class="col">
+      <a href="/RegisterCompany">
+     <div class="p-1 OuterDiv mx-auto">
+       <div class="row">
+         <div class="col-8" ></div>
+         <div class="col-1 ms-2" >
+           <img src="static/login.png" width="40" height="40"></div>
+       </div>
+       <div class="row-11">
+         <div class="col" style="text-align:center;">
+           <div class="center">تسجيل شركة او مؤسسة</div></div>
+       </div>
+     </div>
+      </a>
+    </div>
+    <div class="col">
+     <div class="p-1 OuterDiv mx-auto" style="
+       background-color:var(--container2-color);">
+       <div class="row">
+         <div class="col-8" ></div>
+         <div class="col-1 ms-2" >
+           <img src="static/paper.png" width="40" height="40"></div>
+       </div>
+       <div class="row-11">
+         <div class="col" style="text-align:center;">
+           <div class="center">النماذج</div></div>
+       </div>
+     </div>
+    </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

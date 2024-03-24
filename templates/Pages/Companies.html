@@ -1,0 +1,34 @@
+{% extends 'Pages/Stracture.html' %}
+{% block head %}
+
+{% endblock %}
+{% block body %}
+<h1>Company Information</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>License Number</th>
+        <th>Commercial Register</th>
+        <th>Owners</th>
+        <th>Start Date</th>
+        <th>Communication Numbers</th>
+        <th>Email</th>
+        <th>Date Added</th>
+    </tr>
+    {% for company in companies %}
+    <tr>
+        <td>{{ company['id'] }}</td>
+        <td>{{ company['name'] }}</td>
+        <td>{{ company['license_number'] }}</td>
+        <td>{{ company['commercial_register'] }}</td>
+        <td>{{ company['owners'] }}</td>
+        <td>{{ company['start_date'] }}</td>
+        <td>{{ company['communication_numbers'] }}</td>
+        <td>{{ company['email'] }}</td>
+        <td>{{ company['date_added'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
