@@ -1,7 +1,135 @@
 {% extends 'Pages/Stracture.html' %}
 {% block head %}
-
+<style>
+    /* Add some basic styling for the form */
+  
+    form {
+        width: 90%;
+        /* margin-top:15px; */
+        margin-left:auto;
+        margin-right:auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    label {
+        /* display: block; */
+        /* margin-bottom: 5px; */
+        font-size:30px;
+        /* padding-left:30px */
+    }
+    input[type="text"],[type="email"]{
+      font-family: Arial, sans-serif;
+        width: 80%;
+        padding: 8px;
+        margin-left:50px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-size:20px;
+        text-align:right;
+    } 
+    input[type="date"]{
+      height:70%;
+      width:50%;
+      margin-top:10px;
+      font-size:20px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+  h1{
+  color:#CE9A48;
+  text-align:center;
+  font-size:40px;
+  /* margin-bottom:15; */
+  }
+  
+</style>
 {% endblock %}
 {% block body %}
-<h5>Hi there</h5>
+<h1>
+  تسجيل مؤسسة/شركة
+</h1>
+<!-- Display success or error messages -->
+{% if success_message %}
+<div class="alert alert-success" role="alert">
+    {{ success_message }}
+</div>
+{% endif %}
+
+{% if error_message %}
+<div class="alert alert-danger" role="alert">
+    {{ error_message }}
+</div>
+{% endif %}
+
+<form  action="/RegisterCompany" method="post">
+    <div class="row" style=";">
+      <div class="col" style="text-align:right;">
+        <input type="text" id="license_number" name="license_number" required>
+      </div>
+      <div class="col-2 pt-1" style="">    
+        <label for="license_number">الترخيص</label>
+      </div>
+      <div class="col" style="text-align:right;">
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="col-2 pt-1" style="">
+        <label for="name"">إسم المؤسسة/الشركة</label>
+      </div>
+    </div>
+  <div class="row" style=";">
+    <div class="col" style="text-align:right;">
+      <input type="email" id="email" name="email">
+    </div>
+    <div class="col-2 pt-1" style="">    
+      <label for="email">ايميل الشركة</label>
+    </div>
+    <div class="col" style="text-align:right;">
+      <input type="text" id="commercial_register" name="commercial_register" required>
+    </div>
+    <div class="col-2 pt-1" style="">
+      <label for="commercial_register">السجل التجاري</label>
+    </div>
+  </div>
+  <br>
+  <div class="row" style="">
+    <div class="col" style="text-align:right;">
+    </div>
+    <div class="col-2 pt-1" style="">    
+    </div>
+    <div class="col" style="text-align:right;">
+      <input type="date" id="start_date" name="start_date" required>
+    </div>
+    <div class="col-2 pt-1" style="">
+      <label for="start_date"">بدء النشاط في العمرة</label>
+    </div>
+  </div>
+    <label for="owners">Owners:</label>
+    <input type="text" id="owners" name="owner1" required>
+    <input type="text" id="owners" name="owner2" >
+    <input type="text" id="owners" name="owner3" >
+
+    <input type="date" id="start_date" name="start_date" required>
+
+    <label for="communication_numbers">Communication Numbers:</label>
+    <input type="text" id="communication_numbers" name="communication_number1" required>
+    <input type="text" id="communication_numbers" name="communication_number2" >
+    <input type="text" id="communication_numbers" name="communication_number3" >
+
+
+    <button type="submit">Add Company</button>
+</form>
 {% endblock %}
